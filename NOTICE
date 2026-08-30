@@ -1,0 +1,12 @@
+zh-tech-writing
+
+This project was designed after reviewing public approaches to Chinese
+technical writing and faithful Chinese revision, including the MIT-licensed
+projects https://github.com/luoling8192/technical-writing and
+https://github.com/LifelongLazyLearner/qu-ai-wei.
+
+The initial implementation uses independently written instructions and
+synthetic evaluation cases. It does not include copied private documents or
+upstream source text. If a future change incorporates a substantial portion of
+an upstream work, preserve the applicable copyright and license notice with
+that change.

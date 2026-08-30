@@ -1,0 +1,4 @@
+.DS_Store
+.orca/
+__pycache__/
+*.pyc

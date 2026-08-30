@@ -1,0 +1,7 @@
+interface:
+  display_name: "ZH Tech Writing"
+  short_description: "面向已有技术材料审计、组织、起草并保真修订简体中文文档，保护事实与验证证据"
+  default_prompt: "Use $zh-tech-writing to audit this Simplified Chinese technical document for structure, language, and evidence boundaries."
+
+policy:
+  allow_implicit_invocation: true

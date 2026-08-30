@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600" role="img" aria-labelledby="workflow-title workflow-desc">
+  <title id="workflow-title">zh-tech-writing workflow</title>
+  <desc id="workflow-desc">Technical materials pass through mode selection and evidence safeguards to produce reviewable output.</desc>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .title { fill:#111827; font-size:24px; font-weight:650; }
+    .section { fill:#6b7280; font-size:11px; font-weight:600; letter-spacing:.12em; }
+    .node-title { fill:#111827; font-size:15px; font-weight:600; }
+    .body { fill:#374151; font-size:12px; }
+    .muted { fill:#6b7280; font-size:11px; }
+    .box { fill:#f9fafb; stroke:#e5e7eb; stroke-width:1.2; }
+    .container { fill:none; stroke:#d1d5db; stroke-width:1.2; stroke-dasharray:5 4; }
+    .edge { fill:none; stroke:#3b82f6; stroke-width:2; marker-end:url(#arrow-blue); }
+  </style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto">
+      <polygon points="0 0,9 3.5,0 7" fill="#3b82f6"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="600" fill="#ffffff"/>
+  <text x="48" y="50" class="title">从技术材料到可审阅文档</text>
+  <text x="48" y="76" class="body">模式按请求选择，事实与证据边界贯穿全过程</text>
+
+  <!-- primary flow edges behind nodes -->
+  <path d="M250 285H318" class="edge" data-graph-role="edge" data-source="input" data-target="router"/>
+  <path d="M682 285H748" class="edge" data-graph-role="edge" data-source="router" data-target="guard"/>
+  <path d="M940 285H1006" class="edge" data-graph-role="edge" data-source="guard" data-target="output"/>
+
+  <!-- input -->
+  <g id="input">
+    <text x="56" y="183" class="section">INPUT</text>
+    <rect x="48" y="195" width="202" height="180" rx="6" class="box"/>
+    <text x="72" y="229" class="node-title">技术材料</text>
+    <rect x="72" y="250" width="55" height="38" rx="4" fill="#d9e8f6"/>
+    <rect x="139" y="250" width="55" height="38" rx="4" fill="#dcead6"/>
+    <rect x="72" y="300" width="55" height="38" rx="4" fill="#f5deb8"/>
+    <rect x="139" y="300" width="55" height="38" rx="4" fill="#e4dcf4"/>
+    <text x="99" y="273" text-anchor="middle" class="body">事实</text>
+    <text x="166" y="273" text-anchor="middle" class="body">代码</text>
+    <text x="99" y="323" text-anchor="middle" class="body">约束</text>
+    <text x="166" y="323" text-anchor="middle" class="body">决策</text>
+    <text x="72" y="356" class="muted">文档 · 笔记 · 评审上下文</text>
+  </g>
+
+  <!-- mode router -->
+  <g id="router">
+    <text x="326" y="123" class="section">MODE ROUTER</text>
+    <rect x="318" y="135" width="364" height="300" rx="6" class="container"/>
+    <text x="342" y="169" class="node-title">按用户意图选择模式</text>
+    <rect x="342" y="195" width="142" height="82" rx="5" class="box"/>
+    <rect x="516" y="195" width="142" height="82" rx="5" class="box"/>
+    <rect x="342" y="305" width="142" height="82" rx="5" class="box"/>
+    <rect x="516" y="305" width="142" height="82" rx="5" class="box"/>
+    <text x="365" y="229" class="node-title">Audit</text><text x="365" y="251" class="body">只读诊断</text>
+    <text x="539" y="229" class="node-title">Structure</text><text x="539" y="251" class="body">整理结构</text>
+    <text x="365" y="339" class="node-title">Draft</text><text x="365" y="361" class="body">保真起草</text>
+    <text x="539" y="339" class="node-title">Revise</text><text x="539" y="361" class="body">最小修订</text>
+    <text x="342" y="415" class="muted">缺失决策保持为缺口，不自动补全</text>
+  </g>
+
+  <!-- evidence guard -->
+  <g id="guard">
+    <text x="756" y="168" class="section">EVIDENCE GUARD</text>
+    <rect x="748" y="180" width="192" height="210" rx="6" class="box"/>
+    <text x="772" y="216" class="node-title">事实与证据护栏</text>
+    <text x="772" y="248" class="body">Proposed</text>
+    <text x="772" y="274" class="body">Implemented</text>
+    <text x="772" y="300" class="body">Deployed</text>
+    <text x="772" y="326" class="body">Observed</text>
+    <text x="772" y="352" class="body">Verified</text>
+    <path d="M862 244v112" stroke="#d1d5db" stroke-width="1.5"/>
+    <circle cx="862" cy="248" r="4" fill="#d9e8f6"/><circle cx="862" cy="274" r="4" fill="#d9e8f6"/><circle cx="862" cy="300" r="4" fill="#d9e8f6"/><circle cx="862" cy="326" r="4" fill="#d9e8f6"/><circle cx="862" cy="352" r="4" fill="#d9e8f6"/>
+    <text x="880" y="270" class="muted">不越级</text>
+    <text x="880" y="291" class="muted">不补造</text>
+    <text x="880" y="312" class="muted">不漂移</text>
+  </g>
+
+  <!-- output -->
+  <g id="output">
+    <text x="1014" y="183" class="section">OUTPUT</text>
+    <rect x="1006" y="195" width="146" height="180" rx="6" class="box"/>
+    <text x="1030" y="229" class="node-title">可审阅输出</text>
+    <text x="1030" y="264" class="body">审计报告</text>
+    <text x="1030" y="290" class="body">章节提纲</text>
+    <text x="1030" y="316" class="body">技术初稿</text>
+    <text x="1030" y="342" class="body">保真修订稿</text>
+  </g>
+
+  <!-- publication safety cross-cutting bar -->
+  <g>
+    <rect x="318" y="488" width="622" height="60" rx="6" fill="#fbfbfb" stroke="#e5e7eb" stroke-width="1.2"/>
+    <text x="342" y="515" class="section">PUBLICATION SAFETY</text>
+    <text x="342" y="536" class="body">公开材料只使用合成案例；私有编辑不擅自泛化技术标识</text>
+  </g>
+</svg>
