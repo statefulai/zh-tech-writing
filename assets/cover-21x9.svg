@@ -1,72 +1,83 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1680 720" width="1680" height="720" role="img" aria-labelledby="cover-title cover-desc">
   <title id="cover-title">zh-tech-writing</title>
-  <desc id="cover-desc">A technical writing workbench turns rough notes into a clear evidence-aware document.</desc>
+  <desc id="cover-desc">Technical materials are routed through audit, structure, draft, or revise modes and become a reviewable document without changing facts or overstating evidence.</desc>
   <style>
     text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif; }
-    .ink { stroke: #171717; stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
-    .thin { stroke: #6b7280; stroke-width: 1.2; fill: none; stroke-linecap: round; }
-    .ghost { stroke: #d1d5db; stroke-width: 1; fill: none; }
+    .title { fill:#111827; font-size:58px; font-weight:680; }
+    .subtitle { fill:#4b5563; font-size:25px; font-weight:500; letter-spacing:3px; }
+    .section { fill:#6b7280; font-size:12px; font-weight:650; letter-spacing:.12em; }
+    .node-title { fill:#111827; font-size:22px; font-weight:650; }
+    .mode-title { fill:#111827; font-size:18px; font-weight:650; }
+    .body { fill:#374151; font-size:15px; }
+    .muted { fill:#6b7280; font-size:13px; }
+    .box { fill:#ffffff; stroke:#d1d5db; stroke-width:1.5; }
+    .edge { fill:none; stroke:#3b82f6; stroke-width:3; marker-end:url(#arrow-blue); }
   </style>
+  <defs>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto">
+      <polygon points="0 0,10 4,0 8" fill="#3b82f6"/>
+    </marker>
+  </defs>
   <rect width="1680" height="720" fill="#fbfaf5"/>
 
-  <g opacity="0.65" class="ghost">
-    <path d="M34 70H150M70 34V150"/><circle cx="70" cy="70" r="3" fill="#9ca3af"/>
-    <path d="M1530 70H1646M1610 34V150"/><circle cx="1610" cy="70" r="3" fill="#9ca3af"/>
-    <path d="M34 650H150M70 570V686"/><circle cx="70" cy="650" r="3" fill="#9ca3af"/>
-    <path d="M1530 650H1646M1610 570V686"/><circle cx="1610" cy="650" r="3" fill="#9ca3af"/>
-    <path d="M92 94h48M92 106h32M1540 614h48M1556 626h32"/>
+  <g opacity="0.55" stroke="#d1d5db" stroke-width="1" fill="none">
+    <path d="M48 72H160M84 36V148"/><circle cx="84" cy="72" r="3" fill="#9ca3af"/>
+    <path d="M1520 72H1632M1596 36V148"/><circle cx="1596" cy="72" r="3" fill="#9ca3af"/>
+    <path d="M48 648H160M84 572V684"/><circle cx="84" cy="648" r="3" fill="#9ca3af"/>
+    <path d="M1520 648H1632M1596 572V684"/><circle cx="1596" cy="648" r="3" fill="#9ca3af"/>
   </g>
 
-  <text x="840" y="138" text-anchor="middle" font-size="58" font-weight="650" fill="#111827" letter-spacing="1">zh-tech-writing</text>
-  <path d="M635 159 Q840 170 1045 159" stroke="#b9daf5" stroke-width="11" opacity="0.72" fill="none" stroke-linecap="round"/>
-  <text x="840" y="205" text-anchor="middle" font-size="24" fill="#4b5563" letter-spacing="5">事实 · 结构 · 证据</text>
+  <text x="840" y="112" text-anchor="middle" class="title">zh-tech-writing</text>
+  <path d="M642 134 Q840 145 1038 134" stroke="#b9daf5" stroke-width="11" opacity="0.78" fill="none" stroke-linecap="round"/>
+  <text x="840" y="184" text-anchor="middle" class="subtitle">写清楚，不写过头</text>
 
-  <!-- rough notes -->
-  <g transform="translate(270 315) rotate(-4)">
-    <rect x="0" y="0" width="190" height="230" rx="8" fill="#ffffff" stroke="#9ca3af" stroke-width="1.5"/>
-    <path d="M30 42h92M30 64h132M30 86h106M30 126h130M30 148h75M30 188h118" class="thin"/>
-    <path d="M42 108c30-28 49 33 80 2s46 24 58 8" stroke="#d66f4d" stroke-width="2" fill="none"/>
-    <circle cx="147" cy="45" r="18" fill="#f5deb8" opacity="0.8"/>
-  </g>
-  <g transform="translate(360 300) rotate(5)">
-    <rect x="0" y="0" width="170" height="205" rx="8" fill="#fffdf8" stroke="#d1d5db" stroke-width="1.5"/>
-    <path d="M24 38h100M24 58h75M24 96h120M24 116h88M24 154h110" class="thin"/>
-    <path d="M28 177l28-22 22 10 32-38 34 16" stroke="#86b792" stroke-width="2" fill="none"/>
-  </g>
+  <path d="M398 375H472" class="edge"/>
+  <path d="M1208 375H1282" class="edge"/>
 
-  <!-- sorting flow -->
-  <path d="M526 407 C595 407 610 407 660 407" stroke="#9ec9ed" stroke-width="2" fill="none" stroke-dasharray="6 7"/>
-  <path d="M1010 407 C1060 407 1075 407 1144 407" stroke="#9ec9ed" stroke-width="2" fill="none" stroke-dasharray="6 7"/>
-
-  <!-- editorial workbench -->
-  <g transform="translate(650 300)">
-    <rect x="0" y="0" width="380" height="230" rx="14" fill="#ffffff" stroke="#374151" stroke-width="2"/>
-    <rect x="30" y="28" width="320" height="128" rx="8" fill="#f8fbfd" stroke="#9ca3af" stroke-width="1.4"/>
-    <g class="ghost" opacity="0.7">
-      <path d="M50 54h280M50 80h280M50 106h280M50 132h280"/>
-      <path d="M82 40v106M134 40v106M186 40v106M238 40v106M290 40v106"/>
+  <g>
+    <text x="174" y="266" class="section">INPUT</text>
+    <rect x="160" y="280" width="238" height="190" rx="10" class="box"/>
+    <text x="188" y="320" class="node-title">技术材料</text>
+    <g transform="translate(188 345)">
+      <rect x="0" y="0" width="72" height="48" rx="5" fill="#d9e8f6"/>
+      <rect x="86" y="0" width="72" height="48" rx="5" fill="#dcead6"/>
+      <rect x="0" y="60" width="72" height="48" rx="5" fill="#f5deb8"/>
+      <rect x="86" y="60" width="72" height="48" rx="5" fill="#e4dcf4"/>
+      <text x="36" y="30" text-anchor="middle" class="body">事实</text>
+      <text x="122" y="30" text-anchor="middle" class="body">代码</text>
+      <text x="36" y="90" text-anchor="middle" class="body">约束</text>
+      <text x="122" y="90" text-anchor="middle" class="body">决策</text>
     </g>
-    <path d="M58 116l55-28 44 16 66-42 78 19" stroke="#3b82f6" stroke-width="3" fill="none"/>
-    <circle cx="113" cy="88" r="5" fill="#3b82f6"/><circle cx="223" cy="62" r="5" fill="#3b82f6"/>
-    <rect x="65" y="178" width="250" height="20" rx="10" fill="#dcead6" opacity="0.9"/>
-    <path d="M84 188h76M181 188h52M254 188h42" stroke="#4b5563" stroke-width="1.4"/>
-    <path d="M18 230h344M58 230l-20 45M322 230l20 45" class="ink"/>
-    <path d="M346 36l18-22M354 46l25-10M28 36L10 14M20 46L-5 36" stroke="#d1d5db" stroke-width="1.4"/>
   </g>
 
-  <!-- clean document -->
-  <g transform="translate(1160 292) rotate(2)">
-    <rect x="0" y="0" width="235" height="270" rx="8" fill="#ffffff" stroke="#374151" stroke-width="1.8"/>
-    <rect x="28" y="30" width="96" height="12" rx="6" fill="#d9e8f6"/>
-    <path d="M28 66h170M28 86h138" class="thin"/>
-    <rect x="28" y="112" width="179" height="60" rx="6" fill="#f9fafb" stroke="#e5e7eb"/>
-    <path d="M46 132h70M46 151h112" class="thin"/>
-    <path d="M28 198h170M28 218h145M28 238h116" class="thin"/>
-    <circle cx="190" cy="40" r="20" fill="#dcead6"/>
-    <path d="M180 40l7 7 14-16" stroke="#357a4d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <g>
+    <text x="488" y="236" class="section">CHOOSE ONE MODE</text>
+    <rect x="472" y="250" width="736" height="250" rx="12" fill="#ffffff" stroke="#d1d5db" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <text x="504" y="292" class="node-title">按请求选择工作模式</text>
+    <g transform="translate(504 322)">
+      <rect x="0" y="0" width="150" height="118" rx="8" fill="#f7fbfe" stroke="#d9e8f6" stroke-width="2"/>
+      <rect x="170" y="0" width="150" height="118" rx="8" fill="#f8fbf6" stroke="#dcead6" stroke-width="2"/>
+      <rect x="340" y="0" width="150" height="118" rx="8" fill="#fffaf2" stroke="#f5deb8" stroke-width="2"/>
+      <rect x="510" y="0" width="150" height="118" rx="8" fill="#fbf9fe" stroke="#e4dcf4" stroke-width="2"/>
+      <text x="24" y="38" class="mode-title">Audit</text><text x="24" y="68" class="body">只读审计</text><text x="24" y="92" class="muted">指出问题，不改稿</text>
+      <text x="194" y="38" class="mode-title">Structure</text><text x="194" y="68" class="body">整理结构</text><text x="194" y="92" class="muted">章节与材料映射</text>
+      <text x="364" y="38" class="mode-title">Draft</text><text x="364" y="68" class="body">保真起草</text><text x="364" y="92" class="muted">未知项保持待确认</text>
+      <text x="534" y="38" class="mode-title">Revise</text><text x="534" y="68" class="body">最小修订</text><text x="534" y="92" class="muted">技术内容不漂移</text>
+    </g>
   </g>
 
-  <g opacity="0.55" class="ghost">
-    <path d="M568 574h105M1007 574h105"/><circle cx="560" cy="574" r="3" fill="#9ca3af"/><circle cx="1120" cy="574" r="3" fill="#9ca3af"/>
+  <g>
+    <text x="1296" y="266" class="section">OUTPUT</text>
+    <rect x="1282" y="280" width="238" height="190" rx="10" class="box"/>
+    <text x="1310" y="320" class="node-title">可审阅文档</text>
+    <path d="M1310 350h160M1310 377h128M1310 404h148M1310 431h104" stroke="#9ca3af" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="1472" cy="315" r="20" fill="#dcead6"/>
+    <path d="M1462 315l7 7 14-16" stroke="#357a4d" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g>
+    <rect x="472" y="544" width="736" height="72" rx="10" fill="#ffffff" stroke="#e5e7eb" stroke-width="1.5"/>
+    <text x="840" y="575" text-anchor="middle" class="mode-title">事实不漂移 · 证据不越级</text>
+    <text x="840" y="601" text-anchor="middle" class="muted">计划 ≠ 实现 ≠ 部署 ≠ 运行观察 ≠ 验收</text>
   </g>
 </svg>
