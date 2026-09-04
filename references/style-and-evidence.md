@@ -34,11 +34,16 @@ Review, but do not mechanically ban:
 - paragraph-opening transitions that add no relationship;
 - empty evaluation words such as “显著”, “全面”, or “高效” without a measure;
 - noun-heavy sentences whose main action is hidden;
-- repeated restatement of the same conclusion at section endings.
+- repeated restatement of the same conclusion at section endings;
+- vague attribution such as “专家认为”, “业界普遍”, “研究表明”, or “行业报告显示” with no named source. Mark the gap; do not supply an institution, year, sample size, or origin for the conclusion;
+- conditional or causal leaps where “因此”, “所以”, or “从而” turns co-occurrence, a goal, or a mechanism hypothesis into verified causation. Mark the evidence gap; in Revise, downgrade to goal, expectation, or possibility without adding metrics.
+
+Conventional structure and register are not language defects by themselves. Keep standard RFC or changelog headings when they accurately label their sections, keep lists whose items are genuinely parallel, and keep a formal technical register when it fits the audience and purpose. Revise them only when they obscure meaning, break hierarchy, or weaken the evidence boundary.
 
 ## Protected relationships
 
 - Keep uncertainty words with the claim they qualify.
+- Qualifiers such as “可能”, “通常”, “当前”, “仅”, “尚未”, and “预计” are not empty evaluation words; keep them when their source or role is unclear.
 - Keep citations next to the supported statement.
 - Keep before/after metrics with their time range, population, and method.
 - Keep exceptions and non-goals visible; do not turn them into positive commitments.
